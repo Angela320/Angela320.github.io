@@ -3,84 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTec - Soporte</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: black; /* Fondo negro */
-        }
+    <title>GameTec Store - Soporte</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', function(event) {
+            const nombreInput = document.getElementById('nombre');
+            const correoInput = document.getElementById('correo');
+            const mensajeInput = document.getElementById('mensaje');
+            
+            if (nombreInput.value.trim() === '') {
+                alert('Por favor, introduce tu nombre.');
+                event.preventDefault(); 
+            }
 
-        /* Resto de los estilos CSS */
-        .store-container, .support-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 400px;
-            margin: 20px;
-        }
+            if (correoInput.value.trim() === '') {
+                alert('Por favor, introduce tu correo electrónico.');
+                event.preventDefault(); 
+            }
 
-        h2 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .support-container ul {
-            list-style: disc;
-            margin-left: 20px;
-        }
-
-        .support-container li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .form-container {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
+            if (mensajeInput.value.trim() === '') {
+                alert('Por favor, escribe un mensaje.');
+                event.preventDefault(); 
+            }
+        });
+    });
+    </script>
 </head>
 <body>
     <div class="store-container">
-        <h2> GamTec Store</h2>
-        <p>¡Bienvenido a la tienda de juegos de Epic Games! Aquí puedes encontrar los juegos más populares y emocionantes.</p>
-        <!-- Agrega aquí el contenido de la tienda -->
+        <h2> GameTec Store </h2>
+        <p>¡Bienvenido a la tienda de juegos de GameTec! Aquí puedes encontrar los juegos más populares y emocionantes.</p>
+        
     </div>
 
     <div class="support-container">
